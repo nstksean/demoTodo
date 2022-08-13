@@ -1,38 +1,254 @@
 .App {
-  text-align: center;
+  font-family: 'Lato';
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  height: 800PX;
+  background-color: #333333;
+  color: #FCFCFC;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-size: 16px;
+  margin: 0%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h3 {
+  font-size: 14px;
+  margin: 0%;
+}
+
+h4 {
+  font-size: 12px;
+  margin: 0%;
+
+}
+
+.navContainer {
+  width: 80px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.navBtn {
+  width: 100%;
+  height: 80px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #333333;
 }
 
-.App-link {
-  color: #61dafb;
+.taskContainer {
+  padding: 30px 34px 30px 34px;
+  border-left: 2px solid #404040;
+  width: 520px;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cutLine {
+  margin: 25px 0;
+  border-top: 1px solid #414141;
+}
+
+.pageAddTaskTitleContainer {
+  margin-bottom: 10px;
+}
+
+.inputAddNewTaskContainer {
+  width: 450ox;
+  height: 50px;
+  margin-bottom: 40px;
+}
+
+.inputAddNewTask {
+  width: 450px;
+  height: auto;
+  padding: 10px 15px;
+  background: #FCFCFC 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.inputClearner {
+  width: 30px;
+  height: auto;
+  padding: 10px;
+}
+
+#btnAddTask {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #EA5548;
+  color: #FCFCFC;
+}
+
+.tabContainer {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.taskTab {
+  background: #606060 0% 0% no-repeat padding-box;
+  border-radius: 8px 8px 0px 0px;
+  color: #ACACAC;
+  padding: 6px 20px 6px 20px;
+
+}
+
+.radioTab {
+
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.taskTab:hover {
+  background-color: #EA5548;
+  color: #FCFCFC;
+}
+
+.taskTab:focus-within {
+  background-color: #EA5548;
+  color: #FCFCFC;
+
+}
+
+.taskTab {
+  margin-right: 5px;
+}
+
+#tabTodo {
+  margin-left: 5px;
+}
+
+.taskItem {
+  border-bottom: 1px solid #333;
+}
+
+.taskItemList {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 450px;
+  height: 50px;
+  background-color: #414141;
+  align-items: center;
+
+}
+
+.newTaskItemList {
+  display: flex;
+  width: 450px;
+  height: 50px;
+  background-color: #414141;
+  align-items: center;
+  padding: 0 50px 0 50px;
+}
+
+.detailToogler {
+  width: 40px;
+  justify-self: flex-end;
+  background-color: #333;
+  color: #FCFCFC;
+  padding: 0px 4px;
+}
+
+.detailToogle {
+  width: 40px;
+  justify-self: flex-end;
+  background-color: #333;
+  color: #FCFCFC;
+  transform: rotate(90deg);
+  padding: 0px 4px;
+
+}
+
+.todoContent {
+  width: 370px;
+}
+
+.taskDetail {
+  padding: 0 40px 20px 40px;
+  background-color: #414141;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  width: 40px;
+}
+
+.taskItemList input:checked+label {
+  text-decoration: line-through;
+}
+
+.taskTitleContainer {
+  border-top: 1px solid #333333;
+  padding-top: 10px;
+  margin-bottom: 5px;
+}
+
+.titleRewrite {
+  box-sizing: border-box;
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 20px;
+  margin-bottom: 5px;
+}
+
+.detailBtnContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 15px;
+
+}
+
+.delete {
+  background: #606060 0% 0% no-repeat padding-box;
+  border-radius: 30px;
+  color: #FCFCFC;
+  width: 100px;
+  height: 40px;
+}
+
+.save {
+  background: #EA5548 0% 0% no-repeat padding-box;
+  border-radius: 30px;
+  margin-left: 20px;
+  width: 250px;
+  height: 40px;
+  color: #FCFCFC;
+
+}
+
+.svgNavBtn {
+  width: 25px;
+}
+
+.svgPath {
+  width: 100%;
+  fill: #FCFCFC;
+}
+
+.svgNavBtn .svgPath:hover {
+  fill: #EA5548;
+}
+
+.redSvgPath {
+  fill: #EA5548;
+}
+
+.dotPath {
+  fill: #ACACAC;
+}
+
+.hide {
+  display: none;
 }
