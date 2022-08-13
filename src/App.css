@@ -100,11 +100,11 @@ h4 {
   border-radius: 8px 8px 0px 0px;
   color: #ACACAC;
   padding: 6px 20px 6px 20px;
+  margin-right: 5px;
 
 }
 
 .radioTab {
-
   position: fixed;
   opacity: 0;
   pointer-events: none;
@@ -118,15 +118,14 @@ h4 {
 .taskTab:focus-within {
   background-color: #EA5548;
   color: #FCFCFC;
-
 }
 
-.taskTab {
+.redTaskTab {
+  background: #EA5548 0% 0% no-repeat padding-box;
+  border-radius: 8px 8px 0px 0px;
+  color: #FCFCFC;
+  padding: 6px 20px 6px 20px;
   margin-right: 5px;
-}
-
-#tabTodo {
-  margin-left: 5px;
 }
 
 .taskItem {
@@ -150,6 +149,7 @@ h4 {
   background-color: #414141;
   align-items: center;
   padding: 0 50px 0 50px;
+  box-sizing: border-box;
 }
 
 .detailToogler {
