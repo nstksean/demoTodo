@@ -10,13 +10,13 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      content: 'newshiii',
+      content: 'First Task',
       isDone: false,
       isWrite: false,
     },
     {
       id: 2,
-      content: 'oldshiii',
+      content: 'Second Task',
       isDone: true,
       isWrite: false,
 
