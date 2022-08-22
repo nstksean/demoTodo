@@ -5,9 +5,10 @@ You can open an online demo on
 
 ### https://nstksean.github.io/demoTodo/
 
-## NavButton
+### NavButton
 
 Two navbButton on change what part you want to go.
+
 
 ### + ADD NEW TASK Page
 To add some new tasks in the input, 
@@ -17,6 +18,7 @@ and it will not work when you put nothing inside.
 Finish your task title. 
 
 Press enter or click red button below. Add to your task lists.
+
 
 ## 三 TASK LIST Page
 All the task lists here!
