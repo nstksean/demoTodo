@@ -44,15 +44,15 @@ function TodoTasks({
                     <h2>{todo.content}</h2>
                 </label>
                 <button className={todo.isWrite === true ? "detailToogle " : "detailToogler "} onClick={handleWriteClick}>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                         <path className="dotPath"
-                            d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z" />
+                            d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
                     </svg>
                 </button>
             </div>
             <div className={(todo.isWrite === true ? "taskDetail" : "hide")}>
                 <div className="taskTitleContainer">
-                    <label htmlFor="titleRewrite">TASK TITLE
+                    <label htmlFor="titleRewrite"><h4>TASK TITLE</h4>
                     </label>
                 </div>
                 <input type="search"
@@ -65,12 +65,12 @@ function TodoTasks({
                 <div className="detailBtnContainer">
                     <button className="delete"
                         onClick={handleToggleDelete}
-                    >Delete</button>
+                    ><h3>Delete</h3></button>
                     <button className="save" type='submit'
                         onClick={handleToggleSaveTitle}
                         value={title}
                     // onClick={handleToggleSaveTitle}
-                    >Save</button>
+                    ><h3>Save</h3></button>
                 </div>
 
             </div>
