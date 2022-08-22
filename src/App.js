@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import TodoTasks from './TodoTasks';
 import './App.css';
 import NewTodos from './NewTodos';
@@ -23,6 +23,8 @@ function App() {
     }
   ])
 
+
+
   const [Tabs, setTabs] = useState("ADD NEW TASK")
 
   const [title, setTitle] = useState("")
@@ -39,20 +41,21 @@ function App() {
   const handleInputChange = (e) => {
     setValue(e.target.value)
   }
-
+  const id = useRef(3)
   const handleInputSubmit = (event) => {
     event.preventDefault()
     if (value === "") return
     setTodos(todo => {
       // console.log('sd', prev.length)
       return [{
-        id: todo.length + 1,
+        id: id.current + 1,
         content: value,
         isDone: false,
         isWrite: false,
       }, ...todo]
-    })
 
+    })
+    id.current++
     setValue('')
   }
 
@@ -80,13 +83,13 @@ function App() {
   }
 
 
-  const handleTitleRewrite = (id, value) => {
-    console.log("SV", id, value)
+  const handleTitleRewrite = (id, title) => {
+    console.log("SV", id, title)
     const changeValue = todos.map(todo => {
       if (todo.id !== id) return todo;
       return {
         ...todo,
-        content: value,
+        content: title,
         isWrite: false,
       };
     });
