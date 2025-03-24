@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import '../../src/App.css';
 
 function TodoTasks({
     todo,
@@ -11,7 +11,6 @@ function TodoTasks({
     setTitle,
     title,
     handleDeleteTodo
-
 }) {
 
 
