@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import '../../src/App.css';
 
 function TodoTasks({
@@ -19,13 +18,15 @@ function TodoTasks({
     }
     const handleWriteClick = () => {
         handleToggleIsWrite(todo.id)
+        setTitle(todo.content || "")
     }
     const handleTitleChange = (e) => {
         setTitle(e.target.value)
     }
 
-    const handleToggleSaveTitle = (event) => {
-        handleTitleRewrite(todo.id, event.target.value)
+    const handleToggleSaveTitle = () => {
+        const safeTitle = title || "";
+        handleTitleRewrite(todo.id, safeTitle)
         setTitle("")
     }
     const handleToggleDelete = () => {
@@ -65,10 +66,8 @@ function TodoTasks({
                     <button className="delete"
                         onClick={handleToggleDelete}
                     ><h3>Delete</h3></button>
-                    <button className="save" type='submit'
+                    <button className="save" type='button'
                         onClick={handleToggleSaveTitle}
-                        value={title}
-                    // onClick={handleToggleSaveTitle}
                     ><h3>Save</h3></button>
                 </div>
 
